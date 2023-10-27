@@ -1,0 +1,28 @@
+
+Steps to create Framework:
+Add the dependencies to POM.xml
+Reload project
+Delete main folder
+Add directory recourses under TEST folder
+Create config and features directories under recources
+Under config create config.properties file (used for key value pair important info(url/browser/etc))
+Under feature folder create Login.feature file (u can name is differently)
+Add steps to your feature file (
+Feature: Login Feature
+
+  Scenario: user enters correct credentials and is able to login
+    Given  user navigates to the website
+    When user enters the credentials
+    And user clicks on login button
+    Then user is successfully logged in
+)
+Under Java create utils, steps and runners directories
+Under utils create CommonMethods ConfigReader and Constants classes
+Add common methods that we already have in a different project to CommonMethods class
+Same with Constants, add them from a different project to Constants class
+Also add config reader code from a different project to ConfigReader class
+Add runner class under runners directory and copy it from a different project
+To generate step definitions set dryRun to true and run the runnerClass
+Copy the step definitions that generated and paste them into the  —>
+Create the LoginSteps class under steps directory  and paste generated definitions here
+Start writing the java code into the generated definitions
