@@ -22,7 +22,8 @@ public class AddEmployeePage extends CommonMethods {
 
     @FindBy(id="photofile")
     public WebElement photograph;
-
+    @FindBy(id="employeeId")
+    public WebElement employeeIdLocator;
     @FindBy(id="user_name")
     public WebElement usernameEmp;
 
@@ -35,8 +36,11 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id="btnSave")
     public WebElement saveBtn;
 
-    @FindBy(id="employeeId")
-    public WebElement employeeIdLocator;
+//    @FindBy(id="employeeId")
+//    public WebElement employeeIdLocator;
+
+    @FindBy(xpath = "//input[@name='employeeId']")
+    public WebElement employeeID;
 
     public AddEmployeePage(){
         PageFactory.initElements(driver, this);
